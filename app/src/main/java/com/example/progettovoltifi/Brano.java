@@ -1,5 +1,7 @@
 package com.example.progettovoltifi;
 
+import android.widget.Spinner;
+
 import java.util.Date;
 
 public class Brano
@@ -8,12 +10,16 @@ public class Brano
     private String titolo;
     private int durata;
     private String autore;
-    private Date datacreazione;
+    private String datacreazione;
+    private String genere;
 
-    public Brano(String titolo)
-
+    public Brano(String titolo, int durata, String autore, String datacreazione, String genere)
     {
         this.titolo=titolo;
+        this.durata=durata;
+        this.autore=autore;
+        this.datacreazione=datacreazione;
+        this.genere=genere;
     }
 
     public String getTitolo()
@@ -46,24 +52,35 @@ public class Brano
         this.autore = autore;
     }
 
-    public Date getDatacreazione() {
+    public String getDatacreazione()
+    {
         return datacreazione;
     }
 
-    public void setDatacreazione(Date datacreazione) {
+    public void setDatacreazione(String datacreazione)
+    {
         this.datacreazione = datacreazione;
     }
 
+    public String getGenere()
+    {
+        return genere;
+    }
 
+    public void setGenere(String genere)
+    {
+        this.genere = genere;
+    }
 
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public String toString()
+    {
+        return "Brano{" +
+                "titolo='" + titolo + '\'' +
+                ", durata=" + durata +
+                ", autore='" + autore + '\'' +
+                ", datacreazione='" + datacreazione + '\'' +
+                ", genere=" + genere +
+                '}';
+    }
 }
