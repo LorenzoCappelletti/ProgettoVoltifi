@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity
     EditText durata; // EditText durata
     EditText data_uscita; // EditText data_uscita
     EditText regista; // EditText regista
-    Spinner genere;  // Spinner genere
+    Spinner Spgenere;  // Spinner genere
 
     Gestorebrani gb;
+    String[] generi = {"Pop", "Rock", "Dance", "Trap"};
 
 
     @Override
@@ -36,28 +37,33 @@ public class MainActivity extends AppCompatActivity
         durata = (EditText) findViewById(R.id.durata);
         data_uscita = (EditText) findViewById(R.id.data_uscita);
         regista = (EditText) findViewById(R.id.regista);
-        genere = (Spinner) findViewById(R.id.genere);
+        Spgenere = (Spinner) findViewById(R.id.genere);
 
         gb = new Gestorebrani();
+        // metodo eseguito in classe
+        ArrayAdapter<String> array = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item, generi);
+        Spgenere.setAdapter(array);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.array_genere, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item );
-        genere.setAdapter(adapter);
+        // metodo eseguito a casa
+        //ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_genere, android.R.layout.simple_spinner_item);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item );
+        //genere.setAdapter(adapter);
 
         btnInserisci.setOnClickListener(new View.OnClickListener()
         {
 
             @Override
-            public void onClick(View v)
+            public void onClick (View v)
             {
 
-                gb.addBrano(txtTitolo.getText().toString(),Integer.parseInt(durata.getText().toString())
-                        ,regista.getText().toString(),data_uscita.getText().toString(),genere.getSelectedItem().toString());
+                    gb.addBrano(txtTitolo.getText().toString(), Integer.parseInt(durata.getText().toString())
+                    , regista.getText().toString(), data_uscita.getText().toString(), Spgenere.getSelectedItem().toString());
 
             }
         });
 
     }
+
 
 
 }

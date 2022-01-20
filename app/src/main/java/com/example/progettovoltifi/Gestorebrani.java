@@ -1,5 +1,6 @@
 package com.example.progettovoltifi;
 
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Gestorebrani
     {
         Brano b = new Brano(titolo,durata,autore,datacreazione,genere);
         ListaBrani.add(b);
-        System.out.println(ListaBrani);
+        //System.out.println(ListaBrani);
     }
 
     public void ListaBrani()
