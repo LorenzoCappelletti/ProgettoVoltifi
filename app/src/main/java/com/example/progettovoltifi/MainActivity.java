@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
 
         txtTitolo = (EditText) findViewById(R.id.txtTitolo2);
         durata = (EditText) findViewById(R.id.durata);
-        data_uscita = (EditText) findViewById(R.id.data_uscita);
+        data_uscita = (EditText) findViewById(R.id.data);
         autore = (EditText) findViewById(R.id.autore);
         Spgenere = (Spinner) findViewById(R.id.genere);
 

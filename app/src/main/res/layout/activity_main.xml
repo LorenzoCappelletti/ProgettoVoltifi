@@ -25,7 +25,7 @@
         android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="TITOLO"
+        android:hint="TITOLO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo1" />
 
@@ -59,7 +59,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="DURATA"
+        android:hint="DURATA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo2" />
 
@@ -71,21 +71,9 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="AUTORE"
+        android:hint="AUTORE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durata" />
-
-    <EditText
-        android:id="@+id/data_uscita"
-        android:layout_width="178dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="DATA_USCITA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genere" />
 
     <Spinner
         android:id="@+id/genere"
@@ -95,5 +83,17 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo1" />
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="177dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="DATA_USCITA"
+        app:layout_constraintStart_toEndOf="@+id/durata"
+        app:layout_constraintTop_toBottomOf="@+id/genere" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
