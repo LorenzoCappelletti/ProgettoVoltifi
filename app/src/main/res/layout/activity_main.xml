@@ -10,11 +10,10 @@
         android:id="@+id/txtTitolo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginTop="16dp"
         android:text="INSERISCI I DATI"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +22,7 @@
         android:layout_width="138dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="TITOLO"
@@ -34,33 +33,30 @@
         android:id="@+id/btnInserisci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="121dp"
-        android:layout_marginBottom="235dp"
+        android:layout_marginTop="136dp"
         android:text="INSERIRE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAprire"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regista" />
+        app:layout_constraintTop_toBottomOf="@+id/autore" />
 
     <Button
         android:id="@+id/btnAprire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="51dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="232dp"
+        android:layout_marginTop="136dp"
         android:text="APRIRE"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnInserisci" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnInserisci"
+        app:layout_constraintTop_toBottomOf="@+id/autore" />
 
     <EditText
         android:id="@+id/durata"
         android:layout_width="139dp"
         android:layout_height="55dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="DURATA"
@@ -68,14 +64,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo2" />
 
     <EditText
-        android:id="@+id/regista"
+        android:id="@+id/autore"
         android:layout_width="140dp"
         android:layout_height="56dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="REGISTA"
+        android:text="AUTORE"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durata" />
 
@@ -83,26 +79,21 @@
         android:id="@+id/data_uscita"
         android:layout_width="178dp"
         android:layout_height="55dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="DATA_USCITA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/durata"
         app:layout_constraintTop_toBottomOf="@+id/genere" />
 
     <Spinner
         android:id="@+id/genere"
         android:layout_width="178dp"
         android:layout_height="49dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtTitolo2"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

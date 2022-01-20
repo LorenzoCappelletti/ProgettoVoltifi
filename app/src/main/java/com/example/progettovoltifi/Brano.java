@@ -81,6 +81,6 @@ public class Brano
                 ", autore='" + autore + '\'' +
                 ", datacreazione='" + datacreazione + '\'' +
                 ", genere=" + genere +
-                '}';
+                '}'+"\n\n";
     }
 }

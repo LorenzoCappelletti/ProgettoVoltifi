@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">ProgettoVoltifi</string>
-    
+
     <string-array name="array_genere">
-        <item>romantico</item>
-        <item>avventura</item>
-        <item>horror</item>
-        <item>commedia</item>
-        <item>fantascienza</item>
+        <item>pop</item>
+        <item>rock</item>
+        <item>trap</item>
+        <item>techno</item>
+
 
     </string-array>
 </resources>

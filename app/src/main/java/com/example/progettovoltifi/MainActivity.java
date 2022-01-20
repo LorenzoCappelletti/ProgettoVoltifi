@@ -2,6 +2,7 @@ package com.example.progettovoltifi;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity
     EditText txtTitolo; // EditText titolo
     EditText durata; // EditText durata
     EditText data_uscita; // EditText data_uscita
-    EditText regista; // EditText regista
+    EditText autore; // EditText autore
     Spinner Spgenere;  // Spinner genere
 
     Gestorebrani gb;
@@ -36,10 +37,11 @@ public class MainActivity extends AppCompatActivity
         txtTitolo = (EditText) findViewById(R.id.txtTitolo2);
         durata = (EditText) findViewById(R.id.durata);
         data_uscita = (EditText) findViewById(R.id.data_uscita);
-        regista = (EditText) findViewById(R.id.regista);
+        autore = (EditText) findViewById(R.id.autore);
         Spgenere = (Spinner) findViewById(R.id.genere);
 
         gb = new Gestorebrani();
+
         // metodo eseguito in classe
         ArrayAdapter<String> array = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item, generi);
         Spgenere.setAdapter(array);
@@ -57,8 +59,22 @@ public class MainActivity extends AppCompatActivity
             {
 
                     gb.addBrano(txtTitolo.getText().toString(), Integer.parseInt(durata.getText().toString())
-                    , regista.getText().toString(), data_uscita.getText().toString(), Spgenere.getSelectedItem().toString());
+                    , autore.getText().toString(), data_uscita.getText().toString(), Spgenere.getSelectedItem().toString());
 
+            }
+        });
+
+        btnAprire.setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick (View v)
+            {
+                StringBuilder stringa_finale = new StringBuilder();
+                stringa_finale = gb.ListaBrani();
+                Intent i = new Intent(getApplicationContext(),MainActivity2.class);
+                i.putExtra("stringa_finale",stringa_finale.toString());
+                startActivity(i);
             }
         });
 

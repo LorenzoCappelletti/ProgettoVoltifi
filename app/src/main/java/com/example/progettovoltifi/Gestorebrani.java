@@ -19,15 +19,19 @@ public class Gestorebrani
     {
         Brano b = new Brano(titolo,durata,autore,datacreazione,genere);
         ListaBrani.add(b);
-        //System.out.println(ListaBrani);
+        System.out.println(ListaBrani);
     }
 
-    public void ListaBrani()
+    public StringBuilder ListaBrani()
     {
         StringBuilder stBui = new StringBuilder();
         for(Brano bV : ListaBrani)
         {
             stBui.append(bV.toString());
         }
+
+        return stBui;
     }
+
+
 }
