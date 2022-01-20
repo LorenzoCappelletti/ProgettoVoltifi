@@ -24,13 +24,16 @@ public class Gestorebrani
 
     public StringBuilder ListaBrani()
     {
-        StringBuilder stBui = new StringBuilder();
+        StringBuilder stBrani = new StringBuilder();
         for(Brano bV : ListaBrani)
         {
-            stBui.append(bV.toString());
+            stBrani.append(bV.toString()); // metodo messo in un ciclo per concatenare.
+            //stBrani.append(bV.getTitolo().toString());
+            //stBrani.append(bV.getAutore().toString());
+
         }
 
-        return stBui;
+        return stBrani;
     }
 
 

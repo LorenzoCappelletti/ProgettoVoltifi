@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
 
         txtTitolo = (EditText) findViewById(R.id.txtTitolo2);
         durata = (EditText) findViewById(R.id.durata);
-        data_uscita = (EditText) findViewById(R.id.data_uscita);
+        data_uscita = (EditText) findViewById(R.id.data);
         autore = (EditText) findViewById(R.id.autore);
         Spgenere = (Spinner) findViewById(R.id.genere);
 
@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity
             {
                 StringBuilder stringa_finale = new StringBuilder();
                 stringa_finale = gb.ListaBrani();
+                //String stringa_finale = gb.ListaBrani();
                 Intent i = new Intent(getApplicationContext(),MainActivity2.class);
                 i.putExtra("stringa_finale",stringa_finale.toString());
                 startActivity(i);

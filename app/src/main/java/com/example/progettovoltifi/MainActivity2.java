@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity
 {
-    TextView visiona;
+    TextView v;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -17,8 +17,8 @@ public class MainActivity2 extends AppCompatActivity
         setContentView(R.layout.activity_main2);
         Intent i = getIntent();
         String mesric = i.getStringExtra("stringa_finale");
-        visiona = (TextView)findViewById(R.id.lista);
+        v = (TextView)findViewById(R.id.lista);
         //visione.append(mesric);
-        visiona.setText(mesric);
+        v.setText(mesric);
     }
 }
