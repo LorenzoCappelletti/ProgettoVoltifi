@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+/**
+ * prima classe main dove vengono inizializzati tutti gli oggetti per la realizzazione della nostra activity
+ */
 public class MainActivity extends AppCompatActivity
 {
     Button btnInserisci; // primo bottone
@@ -25,6 +28,12 @@ public class MainActivity extends AppCompatActivity
     String[] generi = {"Pop", "Rock", "Dance", "Trap"};
 
 
+    /**
+     * @param savedInstanceState
+     * Nella classe onCreate verranno richiamati gli oggetti inizializzati precedentemente per dar loro una reference legata all'id
+       presente nel file xml. Ad ogni singolo oggetto verrà così associato un id univoco. All' interno del suddetto metodo verrà istanziato anche il nostro
+       arrayAdapter legato ai generi da noi scelti.  Quest'ultimo verrà applicato all oggetto spinner presente nella nostra prima activity.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -54,6 +63,12 @@ public class MainActivity extends AppCompatActivity
         btnInserisci.setOnClickListener(new View.OnClickListener()
         {
 
+            /**
+             * @param v
+             * Il metodo onClick è legato al bottone btnInserisci. Esso si è andato a formare grazie alla chiamata dell'ascoltatore indirizzata verso
+               lo stesso bottone. Questo metodo viene richiamato ogni volta che si cliccherà il bottone inserisci utilizzato per aggiungere l'oggetto di tipo
+               brano all' interno dell'arrayList.
+             */
             @Override
             public void onClick (View v)
             {
@@ -67,6 +82,12 @@ public class MainActivity extends AppCompatActivity
         btnAprire.setOnClickListener(new View.OnClickListener()
         {
 
+            /**
+             * @param v
+               Analoga cosa viene fatta per il bottone btnAprire. Il metodo onClick viene così creato tramite l'ascoltatore che attiverà tale istruzione ogni volta
+               che si cliccherà il bottone btnAprire. Il seguente metodo permette di stampare tutti i nostri brani sottoforma di stringa in una seconda activity tramite
+               il nostro intent.
+             */
             @Override
             public void onClick (View v)
             {

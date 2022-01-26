@@ -13,6 +13,14 @@ public class Brano
     private String datacreazione;
     private String genere;
 
+    /**
+     * @param titolo
+     * @param durata
+     * @param autore
+     * @param datacreazione
+     * @param genere
+     * Viene così rappresentato il nostro costruttore, dove vengono istanziati tutti gli attributi che caratterizzano l'oggetto brano.
+     */
     public Brano(String titolo, int durata, String autore, String datacreazione, String genere)
     {
         this.titolo=titolo;
