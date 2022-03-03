@@ -24,8 +24,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="68dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="TITOLO"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo1" />
 
@@ -58,8 +58,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="DURATA"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitolo2" />
 
@@ -70,8 +70,8 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="AUTORE"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/durata" />
 
@@ -91,8 +91,8 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="date"
         android:hint="DATA_USCITA"
+        android:inputType="date"
         app:layout_constraintStart_toEndOf="@+id/durata"
         app:layout_constraintTop_toBottomOf="@+id/genere" />
 

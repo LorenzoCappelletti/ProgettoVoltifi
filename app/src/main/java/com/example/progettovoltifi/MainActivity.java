@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -34,11 +35,16 @@ public class MainActivity extends AppCompatActivity
        presente nel file xml. Ad ogni singolo oggetto verrà così associato un id univoco. All' interno del suddetto metodo verrà istanziato anche il nostro
        arrayAdapter legato ai generi da noi scelti.  Quest'ultimo verrà applicato all oggetto spinner presente nella nostra prima activity.
      */
+    String tag = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        int i =0;
+        i++;
+        Log.d(tag, "Lanciato il metodo onCreate " + i);
 
         btnInserisci = (Button) findViewById(R.id.btnInserisci);
         btnAprire = (Button) findViewById(R.id.btnAprire);
@@ -97,9 +103,17 @@ public class MainActivity extends AppCompatActivity
                 Intent i = new Intent(getApplicationContext(),MainActivity2.class);
                 i.putExtra("stringa_finale",stringa_finale.toString());
                 startActivity(i);
+
             }
         });
 
+    }
+
+    @Override
+    protected void onStart()
+    {
+        Log.d(tag,"Siamo nel metodo onStart");
+        super.onStart();
     }
 
 

@@ -29,7 +29,7 @@ public class Gestorebrani
         Brano b = new Brano(titolo,durata,autore,datacreazione,genere);
         ListaBrani.add(b);
         System.out.println(ListaBrani);
-        Log.d("Gestore Brani","inserimento oggetto brano nell'array");
+        //Log.d("Gestore Brani","inserimento oggetto brano nell'array");
 
     }
 
