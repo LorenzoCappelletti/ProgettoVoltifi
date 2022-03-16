@@ -1,5 +1,6 @@
 package com.example.progettovoltifi;
 
+import android.content.Context;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -15,6 +16,8 @@ public class Gestorebrani
     {
         ListaBrani = new ArrayList<Brano>();
     }
+
+
 
     /**
      * @param titolo
@@ -51,6 +54,9 @@ public class Gestorebrani
 
         return stBrani;
     }
+
+
+
 
 
 }

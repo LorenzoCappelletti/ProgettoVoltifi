@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     Spinner Spgenere;  // Spinner genere
 
     Gestorebrani gb;
+    FileManager fm;
     String[] generi = {"Pop", "Rock", "Dance", "Trap"};
 
 
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity
         Spgenere = (Spinner) findViewById(R.id.genere);
 
         gb = new Gestorebrani();
+        fm = new FileManager(getApplicationContext());
+
 
         // metodo eseguito in classe
         ArrayAdapter<String> array = new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item, generi);
@@ -81,6 +84,8 @@ public class MainActivity extends AppCompatActivity
 
                     gb.addBrano(txtTitolo.getText().toString(), Integer.parseInt(durata.getText().toString())
                     , autore.getText().toString(), data_uscita.getText().toString(), Spgenere.getSelectedItem().toString());
+
+                    fm.scriviFile(txtTitolo.getText().toString(), "prova.txt");
 
             }
         });

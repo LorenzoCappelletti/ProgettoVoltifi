@@ -18,14 +18,11 @@ public class FileManager
     Context c;
     StringBuilder sb; // variabile di istanza
 
-    /**
-     *
-     * @param nome_file
-     */
-    public FileManager(String nome_file)
+    public FileManager(Context c)
     {
         this.nome_file = nome_file;
         sb= new StringBuilder();
+        this.c = c;
     }
 
     public StringBuilder leggiFile(String nome_file, Context c)
@@ -54,16 +51,18 @@ public class FileManager
         return sb;
     }
 
-    public String scriviFile(String nome_file, Context c)
+    public String scriviFile(String testo, String nome_file)
     {
         FileOutputStream fileO;
         String esito = "";
-        String testo = "Questo è il testo del file";
+        //String testo = "Questo è il testo del file";
         try
         {
             //openFileOutput all'inizio da errore perchè ci vogliono le eccezioni (file può essere inesistente)
-            fileO =  c.openFileOutput(nome_file,Context.MODE_PRIVATE); // come parametri si ha nome file è il modo in cui viene aperto
+            fileO =  c.openFileOutput(nome_file,Context.MODE_APPEND); // come parametri si ha nome file è il modo in cui viene aperto
             fileO.write(testo.getBytes()); // conversione da caratteri a byte
+            String spazio = ";";
+            fileO.write(spazio.getBytes());
             fileO.close();
             esito = "Scrittura corretta";
         }
