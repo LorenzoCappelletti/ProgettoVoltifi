@@ -100,6 +100,11 @@ public class FileManager
         return sb.toString();
     }
 
+
+    // Json object --> sono degli oggetti. serve per strutturare i dati.
+    // file Json sta nella cartella raw
+    // leggere file, trasformare il json in un oggetto brano.
+
     public String leggiFileAssets()
     {
         String testo = " ";
